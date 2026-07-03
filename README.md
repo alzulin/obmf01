@@ -1,1 +1,1 @@
-# obmf01
+# Questões da Olimpíada Brasileira de Matemática Financeira
