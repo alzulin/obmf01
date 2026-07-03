@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avaliação - Matemática Financeira</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Segoe UI", Arial, sans-serif; background: #e8e8e8; color: #222; padding: 15px; line-height: 1.7; }
+    .prova { max-width: 800px; margin: 0 auto; background: #fff; padding: 30px 25px; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+    .cabecalho { text-align: center; border-bottom: 3px solid #2c3e50; padding-bottom: 20px; margin-bottom: 20px; }
+    .cabecalho .escola { font-size: 22px; font-weight: bold; color: #2c3e50; text-transform: uppercase; }
+    .cabecalho .subtitulo { font-size: 14px; color: #555; margin-top: 3px; }
+    .cabecalho .titulo-prova { font-size: 26px; font-weight: bold; margin-top: 15px; color: #c0392b; text-transform: uppercase; letter-spacing: 2px; }
+    .info { display: flex; flex-wrap: wrap; gap: 5px 30px; margin-bottom: 20px; font-size: 15px; padding: 15px; background: #f7f9fc; border-left: 4px solid #2c3e50; border-radius: 4px; }
+    .info span { white-space: nowrap; }
+    .info strong { color: #2c3e50; }
+    .instrucoes { margin-bottom: 25px; padding: 15px 20px; background: #fff8e1; border: 1px solid #f0d87a; border-radius: 6px; }
+    .instrucoes h2 { font-size: 17px; margin-bottom: 8px; color: #856404; }
+    .instrucoes ul { padding-left: 20px; font-size: 14px; color: #6b5300; }
+    .instrucoes li { margin-bottom: 4px; }
+    .secao-titulo { font-size: 20px; font-weight: bold; color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 5px; margin-bottom: 20px; }
+    .questao { margin-bottom: 25px; padding: 15px 18px; background: #fdfdfd; border: 1px solid #e0e0e0; border-left: 5px solid #3498db; border-radius: 6px; }
+    .questao.dissertativa { border-left-color: #27ae60; }
+    .questao .enunciado { font-size: 16px; font-weight: bold; margin-bottom: 12px; color: #333; }
+    .questao .valor { font-size: 13px; font-weight: normal; color: #888; }
+    .alternativas { list-style: none; padding: 0; }
+    .alternativas li { padding: 8px 12px; margin-bottom: 5px; background: #f5f7fa; border-radius: 4px; font-size: 15px; transition: background 0.2s; }
+    .alternativas li:hover { background: #e8edf3; }
+    .alternativas li strong { color: #2c3e50; margin-right: 6px; }
+    .tipo-questao { display: inline-block; font-size: 11px; font-weight: bold; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; margin-bottom: 8px; }
+    .tipo-objetiva { background: #d6eaf8; color: #2471a3; }
+    .tipo-dissertativa { background: #d5f5e3; color: #1e8449; }
+    .nota-dissertativa { font-size: 14px; color: #777; font-style: italic; margin-top: 5px; }
+    .rodape { text-align: center; margin-top: 30px; padding-top: 15px; border-top: 2px solid #e0e0e0; font-size: 14px; color: #999; }
+    @media (max-width: 600px) {
+      body { padding: 8px; }
+      .prova { padding: 18px 14px; }
+      .cabecalho .escola { font-size: 18px; }
+      .cabecalho .titulo-prova { font-size: 20px; }
+      .info { flex-direction: column; gap: 3px; }
+      .questao { padding: 12px 14px; }
+      .alternativas li { padding: 7px 10px; font-size: 14px; }
+    }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .prova { box-shadow: none; border-radius: 0; max-width: 100%; }
+      .alternativas li:hover { background: #f5f7fa; }
+    }
+  </style>
+</head>
+<body>
+  <div class="prova">
+    <div class="cabecalho">
+      <div class="escola">CEEP - Centro Estadual de Educação Profissional Pe Joseir Sversutti</div>
+      <div class="subtitulo">"Educando para o futuro"</div>
+      <div class="titulo-prova">Avaliação de Matemática Financeira</div>
+    </div>
+
+    <div class="info">
+      <span><strong>Professor(a):</strong> Zulin</span>
+      <span><strong>Turma:</strong> 1º TTI</span>
+      <span><strong>Data:</strong> 03/07/2026</span>
+      <span><strong>Valor:</strong> 3,0 pontos</span>
+    </div>
+
+    <div class="instrucoes">
+      <h2>📋 Instruções</h2>
+      <ul>
+        <li>Leia atentamente cada questão antes de responder.</li>
+        <li>Responda todas as questões no <strong>caderno</strong>.</li>
+        <li>Nas questões objetivas, escreva apenas a <strong>letra</strong> da alternativa correta.</li>
+        <li>Nas questões dissertativas, apresente o <strong>desenvolvimento/cálculo</strong>.</li>
+        <li>Respostas sem desenvolvimento não receberão pontuação completa.</li>
+      </ul>
+    </div>
+
+    <h2 class="secao-titulo">Questões</h2>
+
+    <div class="questao">
+      <span class="tipo-questao tipo-objetiva">Objetiva</span>
+      <p class="enunciado">
+        1) Após o falecimento de um grande empresário, seu inventário contava com uma rede de lojas varejistas. Ao receber
+um valor de R$150.000,00 referente ao quinhão ao qual tinha direito, um dos herdeiros tinha em mente dois destinos
+para o valor: ampliar os negócios do pai, abrindo mais uma franquia ou manter todo (ou parte) do dinheiro investido.
+Para a primeira opção, o herdeiro cogita abrir uma franquia que gera lucro anual médio estimado em R$36.000,00 ao
+passo que, para a segunda, estuda-se aplicar a herança no Tesouro Selic, cujo rendimento anual é de 12%. Se optar
+pelo Tesouro Selic, o herdeiro poderá resgatar o montante após 5 anos, descontado a alíquota de 15% sobre os
+rendimentos, referente ao Imposto de Renda.
+Nesse cenário, a viabilidade do novo negócio deve ser estudada, referenciando esse prazo e considerando que não
+haverá variação no lucro estimado nem no valor da franquia.
+A opção mais vantajosa ao herdeiro, ao fim do prazo de 5 anos, considerando os valores líquidos é
+        <span class="valor">(1,0 ponto)</span>
+      </p>
+      <ul class="alternativas">
+        <li><strong>a)</strong> a franquia, visto que o lucro anual supera a taxa percentual do investimento.</li>
+        <li><strong>b)</strong> a franquia, visto que o retorno total supera o montante líquido do investimento.</li>
+        <li><strong>c)</strong> qualquer uma das duas, visto que o imposto sobre o rendimento anula a vantagem dos juros compostos.</li>
+        <li><strong>d)</strong> o Tesouro Selic, visto que a soma das porcentagens mencionadas superam o percentual de lucro anual estimado.</li>
+        <li><strong>e)</strong> o Tesouro Selic, visto que a capitalização composta gera rendimentos maiores que crescimento linear da franquia.</li>
+      </ul>
+    </div>
+
+    <div class="questao">
+      <span class="tipo-questao tipo-objetiva">Objetiva</span>
+      <p class="enunciado">
+        2) Ao ficar desempregada e esgotar suas reservas de emergência, uma trabalhadora apela para o uso do cheque
+especial. Ao esgotar o limite oferecido pelo banco nessa modalidade, ela vê uma dívida de R$6000,00 evoluir sob
+uma taxa de 8% ao mês, em juros compostos. Passados 4 meses, ela retorna ao mercado de trabalho e, com sua
+nova renda, quita metade do valor acumulado da dívida. O saldo restante é renegociado sob um regime de juros
+simples, a uma taxa de 2% ao mês. A intenção da trabalhadora é quitar todo o saldo em uma única parcela, daqui a 4
+meses.
+Se necessário, adote 1,082 e 1,360 como respectivas aproximações às potências \((1,02)^4\) e \((1,08)^4\).
+
+Considerando que essa renegociação será concretizada, o total de juros pagos ao longo de todo o período é um valor
+        <span class="valor">(1,0 ponto)</span>
+      </p>
+      <ul class="alternativas">
+        <li><strong>a)</strong> inferior a R$2000,00.</li>
+        <li><strong>b)</strong> superior a R$2000,00 e inferior a R$2200,00.</li>
+        <li><strong>c)</strong> superior a R$2200,00 e inferior a R$2400,00.</li>
+        <li><strong>d)</strong> superior a R$2400,00 e inferior a R$2600,00.</li>
+        <li><strong>e)</strong> superior a R$2600,00.</li>
+      </ul>
+    </div>
+
+    <div class="questao">
+      <span class="tipo-questao tipo-objetiva">Objetiva</span>
+      <p class="enunciado">
+        3) Pedro é universitário, estuda e trabalha meio período. Ele mantém uma conta-corrente no Banco A, onde recebe sua bolsa de R$300,00, e uma conta de investimentos no Banco B, onde aplicou R$1.500,00. Com a rotina agitada, Pedro sentia dificuldade em acompanhar sua situação financeira total, pois precisava acessar dois aplicativos diferentes para saber quanto tinha disponível.
+Recentemente, ele passou a usar um aplicativo que, por meio da tecnologia do Open Finance, agrega as informações financeiras das diferentes instituições em uma única tela. Agora, Pedro consegue visualizar rapidamente seu saldo total de R$1.800,00, tomar decisões com base nesse panorama completo e até estabelecer metas de poupança e gastos com mais clareza.
+Com base nessa situação, qual a principal vantagem do Open Finance para o planejamento financeiro de Pedro?
+        <span class="valor">(1,0 ponto)</span>
+      </p>
+      <ul class="alternativas">
+        <li><strong>a)</strong> Permitir que ele mova automaticamente seus investimentos entre diferentes bancos.</li>
+        <li><strong>b)</strong> Consolidar informações financeiras de várias instituições em um único lugar.</li>
+        <li><strong>c)</strong> Garantir que todos os seus dados estejam protegidos contra fraudes.</li>
+        <li><strong>d)</strong> Impedir que ele gaste mais do que recebe, bloqueando seus cartões.</li>
+        <li><strong>e)</strong> Eliminar a necessidade de ter conta em mais de uma instituição financeira.</li>
+      </ul>
+    </div>
+
+    <div class="rodape">
+      <p>Boa prova! 📝</p>
+    </div>
+  </div>
+</body>
+</html>
